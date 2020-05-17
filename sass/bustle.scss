@@ -1162,6 +1162,9 @@ table.dataTable td {
     }
    
 }
+.savings_body{
+    position: relative;
+}
     @media only screen and (max-width:767px){
         .user_modal .modal_content .modal_body .chart_grid {
             column-gap: 20px;
@@ -1183,7 +1186,7 @@ table.dataTable td {
     }
     .industry_bg{
         max-width: 100vw;
-        #industry_table_wrapper, #tracking_1_wrapper, #tracking_1_wrapper, #users_table_wrapper{
+        #industry_table_wrapper, #tracking_1_wrapper, #tracking_2_wrapper, #users_table_wrapper{
             width: 100%;
         }
     }
@@ -1292,6 +1295,7 @@ table.dataTable td {
         .logo{
             img{
                 max-width: 100px;
+                max-width: 110px;
                 height: auto;
             }
         }
@@ -1325,6 +1329,7 @@ table.dataTable td {
     @media only screen and (max-width:425px){
         .dash_body .dash_main_body .dash_body_container .tabs_container {
             padding: 20px 10px;
+            max-width: calc(100vw - 40px);
             .users_list_container{
                 @include box-shadow(none);
             }

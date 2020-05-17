@@ -301,6 +301,7 @@ if(findMapId){
     )
   }
 }
+$(document).ready(function() {
 
 // loan data table 
 const loanDataTable = document.getElementById("loan_table");
@@ -329,7 +330,14 @@ if(trackingDataTab){
     $('#tracking_1').DataTable();
      // data tab two 
      $('#tracking_2').DataTable();
+// make the table in the tab responsive 
+  $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      $($.fn.dataTable.tables(true)).DataTable()
+         .columns.adjust()
+         .responsive.recalc();
+  }); 
 }
+})
 
 // Get the modal
 var modal = document.getElementById("myModal");
