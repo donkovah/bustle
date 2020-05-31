@@ -881,6 +881,17 @@ table.dataTable td {
         -webkit-animation-duration: 0.4s;
         animation-name: animatetop;
         animation-duration: 0.4s;
+        .profile_pic{
+            min-height: 120px;
+            img{
+                height: 100px;
+                width: 100px;
+                @include border-radius(50%);
+                object-fit: cover;
+                background: #efefef;
+                margin: auto;
+            }
+        }
         .modal_header {
             padding: 2px 16px;   
               /* The Close Button */
@@ -914,6 +925,24 @@ table.dataTable td {
                     font-size: 18px;
                     line-height: 21px;
                     color: #000000;
+                    &.l1{
+                        margin-bottom: .5rem;
+                    }
+                    &._phone{
+                        font-size: 16px;
+                        line-height: 18px;
+                        color: #444;
+                        margin-bottom: .3rem;
+
+                    }
+                }
+                ._address{
+                    font-size: 14px;
+                    line-height: 18px;
+                    color: #888;
+                    max-width: 400px;
+                    margin: auto;
+                    padding: 0 10px;
                 }
                 select{
                     width: 376px;
@@ -925,6 +954,7 @@ table.dataTable td {
                     margin-bottom: 20px;
                     color:hsl(200, 30%, 36%);
                     -webkit-appearance: none;
+                    @include border-radius(8px);
                     background: url("../img/bg/select.svg") no-repeat;
                     background-color: #fff;
                     background-position: calc(100% - 20px) calc(1em + 2px),
@@ -943,6 +973,23 @@ table.dataTable td {
                 column-gap: 25px;
                 row-gap: 25px;
                 margin-top: 60px;
+                &._single_grid{
+                    grid-template-columns:  1fr;
+                    row-gap: 65px;
+                    .chart_item{
+                        text-align: center;
+                        .chart_title{
+                            max-width: 400px;
+                            margin: auto;
+                            // @include border (none);
+                            @include border-bottom((1px solid #C4C4C4));
+                            @include border-bottom(none);
+                            p{
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
                 .chart_item{
                     text-align: center;
                     .chart_title{
@@ -965,7 +1012,7 @@ table.dataTable td {
                         align-items: center;
                         flex-wrap: wrap;
                         @include box-shadow (0px 4px 4px rgba(0, 0, 0, 0.1));
-                        #total_sales, #volume_sales, #monthly_sales, #purchase_tracking{
+                        #total_sales, #volume_sales, #monthly_sales, #purchase_tracking, #sales_amount, #sales_volume, #monthly_sales_new, #purchase_tracking_new{
                             width:100%;
                         }
                         .sales_summary{
@@ -1386,8 +1433,14 @@ table.dataTable td {
             }
             
         }
+        .user_modal .modal_content .modal_body .chart_grid .chart_item .chart_body #sales_amount, .user_modal .modal_content .modal_body .chart_grid .chart_item .chart_body #sales_volume, .user_modal .modal_content .modal_body .chart_grid .chart_item .chart_body #monthly_sales_new, .user_modal .modal_content .modal_body .chart_grid .chart_item .chart_body #purchase_tracking_new{
+            width:90%;
+        }
         .user_modal .modal_content .modal_body {
             padding: 2px 15px;
+        }
+        .user_modal .modal_content .modal_body._mu {
+            padding: 2px 1px;
         }
         .user_modal .modal_content .modal_body .modal_title select {
             width: 210px;

@@ -371,95 +371,36 @@ if(modal){
       modal.style.display = "none";
     }
   }
-  // charts 
-  // volume chart
-  var options = {
-      series: [{
-      data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380, 500, 400]
-    }],
-      chart: {
-      type: 'bar',
-      height: 250
-    },
-    dataLabels: {
-      enabled: false
-    },
-    xaxis: {
-      categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    }
-    };
-  let volumeChart = new ApexCharts(document.querySelector("#volume_sales"), options);
-  volumeChart.render();
 
-    // Total sales chart
-    var options = {
+
+        // volume, purchase and monthly sales charts
+      var options = {
         series: [{
-        data: [400, 448, 540, 690, 1200, 500],
+        data: [400, 448, 540, 690, 1200, 200, 500, 260, 560, 900, 260, 500, 130, 200, 700, 300, 500, 620, 500, 500, 540, 500, 500, 1000, 500, 400, 500, 200, 500, 500],
 
       }],
         chart: {
         type: 'bar',
-        height: 250
+        height: 300
       },
-      colors: ['#F2994A'],
-   
+      // colors: ['#F2994A'],
+      colors: ['#00cc00'],
+  
       dataLabels: {
         enabled: false,
       },
       xaxis: {
-        categories: ['Jan', 'Mar',  'May', 'Jul',  'Sep',  'Nov', ],
+        categories: ['Jan 1', 'Jan 2',  'Jan 3', 'Jan 4',  'Jan 5',  'Jan 6',  'Jan 7',  'Jan 8',  'Jan 9',  'Jan 10',  'Jan 11',  'Jan 12',  'Jan 13',  'Jan 14',  'Jan 15',  'Jan 16',  'Jan 17',  'Jan 18',  'Jan 19',  'Jan 20',  'Jan 21',  'Jan 22',  'Jan 23',  'Jan 24',  'Jan 25',  'Jan 26',  'Jan 27',  'Jan 28',  'Jan 29',  'Jan 30'],
       }
       };
-    let totalSalesChart = new ApexCharts(document.querySelector("#total_sales"), options);
-    totalSalesChart.render();
-
-      // Monthly growth chart
-      var options = {
-        series: [44, 55, 13, 43],
-        chart: {
-        type: 'pie',
-      },
-      legend: {
-        position: 'bottom'
-      },
-      labels: ['Jan-Mar', 'Apr-Jun', 'Jul-Sep', 'Oct-Dec'],
-      };
-    
-    let monthlyGrowthChart = new ApexCharts(document.querySelector("#monthly_sales"), options);
-    monthlyGrowthChart.render();
-
-    // Purchase tracking chart 
-    var options = {
-        series: [{
-        name: 'series1',
-        data: [31, 40, 28, 51, 42, 109, 100]
-      }, {
-        name: 'series2',
-        data: [11, 32, 45, 32, 34, 52, 41]
-      }],
-        chart: {
-        height: 310,
-        type: 'area'
-      },
-      dataLabels: {
-        enabled: false
-      },
-      stroke: {
-        curve: 'smooth'
-      },
-      xaxis: {
-        type: 'datetime',
-        categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
-      },
-      tooltip: {
-        x: {
-          format: 'dd/MM/yy HH:mm'
-        },
-      },
-      };
-
-      var purchaseTrackingChart = new ApexCharts(document.querySelector("#purchase_tracking"), options);
-      purchaseTrackingChart.render();
+      var purchaseChart = new ApexCharts(document.querySelector("#purchase_tracking_new"), options);
+      var salesVolume = new ApexCharts(document.querySelector("#sales_volume"), options);
+      var monthlySalesChart = new ApexCharts(document.querySelector("#monthly_sales_new"), options);
+      var salesAmount = new ApexCharts(document.querySelector("#sales_amount"), options);
+      purchaseChart.render();
+      salesVolume.render();
+      monthlySalesChart.render();
+      salesAmount.render();
   
 }
 
@@ -575,4 +516,96 @@ if(overviewPage){
   // overview chart 
   let closedCasesChart = new ApexCharts(document.querySelector("#closed_cases_chart"), options);
   closedCasesChart.render();
+}
+var svgCharts = document.querySelector(".charts");
+if(svgCharts){
+    // charts 
+  // volume chart
+  var options = {
+    series: [{
+    data: [400, 430, 448, 470, 540, 580, 690, 1100, 1200, 1380, 500, 400]
+  }],
+    chart: {
+    type: 'bar',
+    height: 250
+  },
+  dataLabels: {
+    enabled: false
+  },
+  xaxis: {
+    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  }
+  };
+let volumeChart = new ApexCharts(document.querySelector("#volume_sales"), options);
+volumeChart.render();
+
+  // Total sales chart
+  var options = {
+      series: [{
+      data: [400, 448, 540, 690, 1200, 500],
+
+    }],
+      chart: {
+      type: 'bar',
+      height: 250
+    },
+    colors: ['#F2994A'],
+ 
+    dataLabels: {
+      enabled: false,
+    },
+    xaxis: {
+      categories: ['Jan', 'Mar',  'May', 'Jul',  'Sep',  'Nov', ],
+    }
+    };
+  let totalSalesChart = new ApexCharts(document.querySelector("#total_sales"), options);
+  totalSalesChart.render();
+
+    // Monthly growth chart
+    var options = {
+      series: [44, 55, 13, 43],
+      chart: {
+      type: 'pie',
+    },
+    legend: {
+      position: 'bottom'
+    },
+    labels: ['Jan-Mar', 'Apr-Jun', 'Jul-Sep', 'Oct-Dec'],
+    };
+  
+  let monthlyGrowthChart = new ApexCharts(document.querySelector("#monthly_sales"), options);
+  monthlyGrowthChart.render();
+
+  // Purchase tracking chart 
+  var options = {
+      series: [{
+      name: 'series1',
+      data: [31, 40, 28, 51, 42, 109, 100]
+    }, {
+      name: 'series2',
+      data: [11, 32, 45, 32, 34, 52, 41]
+    }],
+      chart: {
+      height: 310,
+      type: 'area'
+    },
+    dataLabels: {
+      enabled: false
+    },
+    stroke: {
+      curve: 'smooth'
+    },
+    xaxis: {
+      type: 'datetime',
+      categories: ["2018-09-19T00:00:00.000Z", "2018-09-19T01:30:00.000Z", "2018-09-19T02:30:00.000Z", "2018-09-19T03:30:00.000Z", "2018-09-19T04:30:00.000Z", "2018-09-19T05:30:00.000Z", "2018-09-19T06:30:00.000Z"]
+    },
+    tooltip: {
+      x: {
+        format: 'dd/MM/yy HH:mm'
+      },
+    },
+    };
+
+    var purchaseTrackingChart = new ApexCharts(document.querySelector("#purchase_tracking"), options);
+    purchaseTrackingChart.render();
 }
