@@ -244,125 +244,50 @@
                 <div class="title_head">
                     <h4>Pre-loans page</h4>
                 </div>
-                <div class="loan_table">
-                    <table id="loan_table" class="table dt-responsive" width="100%">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Location</th>
-                                <th>Loan</th>
-                                <th>Loan Purpose</th>
-                                <th>Industry</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Tolu Pelumi</td>
-                                <td>Yaba</td>
-                                <td>NGN 20,000</td>
-                                <td>School fees</td>
-                                <td>Fasion</td>
-                            </tr>
-                            <tr>
-                                <td>Ibukun Azeez</td>
-                                <td>Ikorodu</td>
-                                <td>NGN 23,630,169</td>
-                                <td>Rent</td>
-                                <td>Akasuki</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Logistics</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Obito</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Madara</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Sasuke</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Tsunade</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Shino</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Hinata</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Itachi</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Uchiha</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Nagato</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Danzo</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Uzumaki</td>
-                            </tr>
-                            <tr>
-                                <td>Chuckwudi  Osita</td>
-                                <td>Maryland</td>
-                                <td>NGN 23,169</td>
-                                <td>Buy Goods</td>
-                                <td>Logistics</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="filter_container">
+                   <form action="">
+                        <div class="form_flex">
+                          <div class="_flex-item">
+                            <div class="form_group">
+                                <label for="amount">Amount</label>
+                                <select name="" id="amount">
+                                    <option value="">Select amount</option>
+                                    <option value="">1,000 - 99,000</option>
+                                    <option value="">100,000 - 999,000</option>
+                                    <option value="">1,000,000 - 99,000,000</option>
+                                </select>
+                            </div>
+                          </div>
+                         <div class="_flex-item">
+                            <div class="form_group">
+                                <label for="location">Location</label>
+                                <select name="" id="location">
+                                    <option value="">Select location</option>
+                                    <option value="">Yaba</option>
+                                    <option value="">Lekki</option>
+                                    <option value="">Ajah</option>
+                                </select>
+                            </div>
+                         </div>
+                          <div class="_flex-item">
+                            <div class="form_group">
+                                <label for="industry">Industry</label>
+                                <select name="" id="industry">
+                                    <option value="">Select industry</option>
+                                    <option value="">Golden</option>
+                                    <option value="">Mac</option>
+                                    <option value="">Benz</option>
+                                </select>
+                            </div>
+                          </div>
+                        </div>
+                        <button>
+                            Filter &nbsp;
+                            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.2392 0H0.760647C0.436772 0 0.165894 0.288544 0.165894 0.618308V4.39882C0.165894 4.41649 0.165894 4.43415 0.171782 4.45771C0.171782 4.4636 0.177671 4.47537 0.177671 4.48126C0.177671 4.49304 0.18356 4.49893 0.18356 4.51071C0.18356 4.52248 0.189448 4.52837 0.189448 4.54015C0.189448 4.54604 0.195337 4.55782 0.195337 4.5637C0.201225 4.57548 0.201226 4.58726 0.207114 4.59315C0.207114 4.59904 0.213003 4.60493 0.213003 4.6167C0.218891 4.62848 0.218891 4.63437 0.22478 4.64615C0.230669 4.65203 0.230669 4.65792 0.236557 4.6697C0.242446 4.68148 0.248335 4.68737 0.248335 4.69325C0.254223 4.69914 0.254223 4.71092 0.260112 4.71681C0.266001 4.7227 0.271889 4.73448 0.277778 4.74036C0.283667 4.74625 0.289555 4.75803 0.295444 4.76392C0.301333 4.76981 0.307221 4.7757 0.31311 4.78747C0.318998 4.79336 0.324887 4.79336 0.324887 4.79925L7.05562 12.1365V21.4111C7.05562 21.6408 7.18517 21.8469 7.39127 21.947C7.46782 21.9823 7.55026 22 7.63859 22C7.77992 22 7.91536 21.9529 8.02135 21.8587L12.7441 17.8367C12.8736 17.7248 12.9502 17.56 12.9443 17.3892V12.1365L19.6691 4.79336C19.675 4.78747 19.675 4.78747 19.6809 4.78158C19.6868 4.7757 19.6927 4.76981 19.6985 4.75803C19.7044 4.75214 19.7103 4.74625 19.7162 4.73448C19.7221 4.7227 19.728 4.71681 19.7339 4.71092C19.7398 4.70503 19.7457 4.69325 19.7457 4.68737C19.7515 4.68148 19.7574 4.6697 19.7633 4.66381C19.7692 4.65792 19.7692 4.65203 19.7751 4.64026C19.781 4.62848 19.7869 4.62259 19.7869 4.61081C19.7869 4.60493 19.7928 4.59904 19.7928 4.58726C19.7987 4.57548 19.7987 4.56959 19.8045 4.55782C19.8045 4.55193 19.8104 4.54015 19.8104 4.53426C19.8104 4.52248 19.8163 4.5166 19.8163 4.50482C19.8163 4.49304 19.8222 4.48715 19.8222 4.47537C19.8222 4.46949 19.8281 4.45771 19.8281 4.45182C19.8281 4.43415 19.834 4.41649 19.834 4.39293V0.61242C19.834 0.288544 19.569 0 19.2392 0ZM11.9255 11.5182C11.8254 11.6242 11.7665 11.7596 11.7665 11.9069V17.1124L8.23335 20.1333V11.9069C8.23335 11.7596 8.17446 11.6242 8.07435 11.5182L2.09737 5.00535H17.9025L11.9255 11.5182ZM18.6563 3.82762H1.34362V1.17773H18.6563V3.82762Z" fill="#172F4F"/>
+                            </svg> 
+                        </button>
+                    </form>
                 </div>
 
             </div>
