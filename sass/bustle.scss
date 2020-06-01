@@ -1082,11 +1082,16 @@ table.dataTable td {
                     @include transition (all 0.3s);
                     background: hsla(214, 84%, 56%, 0.7);
                     select{
-                    background:hsl(214, 84%, 96%) ;
+                    background:hsla(214, 84%, 86%, 0.8) ;
+                    background: none;
+                    color:hsl(214, 84%, 99%);
+                    @include border-bottom(1px solid hsla(214, 84%, 96%, 0.9));
                     &:focus{
                         @include box-shadow(none);
                         @include outline(none);
                         @include border(none);
+                        @include border-bottom(1px solid hsla(214, 84%, 96%, 0.9));
+
                     }
                     }
                     &:hover{
@@ -1108,10 +1113,14 @@ table.dataTable td {
                 background: hsl(159, 61%, 43%);
                 select{
                     background:hsl(159, 61%, 93%) ;
+                    background: none;
+                    color:hsl(159, 61%, 96%);
+                    @include border-bottom(1px solid hsl(159, 61%, 93%));
                     &:focus{
                         @include box-shadow(none);
                         @include outline(none);
                         @include border(none);
+                        @include border-bottom(1px solid hsl(159, 61%, 93%));
                     }
                 }
                 &:hover{
@@ -1133,10 +1142,15 @@ table.dataTable td {
                     background: hsl(24, 100%, 50%);
                     select{
                         background:hsl(24, 100%, 96%);
+                        background: none;
+                        color:hsl(24, 100%, 96%);
+                        @include border-bottom(1px solid hsl(24, 100%, 96%));
                         &:focus{
                             @include box-shadow(none);
                             @include outline(none);
                             @include border(none);
+                            @include border-bottom(1px solid hsl(24, 100%, 96%));
+
                         }
                     }
                     &:hover{
@@ -1664,3 +1678,46 @@ table.dataTable td {
     }
 }
 
+/*===== The CSS =====*/
+.cProgress{
+	width: 80px;
+    height: 80px;
+    display: inline;
+}
+.cProgress .track, .cProgress .fill{
+	fill: rgba(0, 0, 0, 0);
+	stroke-width: 6;
+	transform: rotate(90deg)translate(0px, -80px);
+}
+.cProgress .track{
+	// stroke:hsl(200, 20%, 56%);
+	stroke:hsl(200, 20%, 76%);
+}
+.cProgress .fill {
+	stroke: rgb(255, 255, 255);
+	stroke-dasharray: 219.99078369140625;
+	stroke-dashoffset: -219.99078369140625;
+	transition: stroke-dashoffset 1s;
+}
+.cProgress.blue .fill {
+    stroke:hsl(200, 50%, 36%);
+}
+.cProgress.green .fill {
+	stroke: rgb(186, 223, 172);
+}
+.cProgress .value, .cProgress .text {
+	fill: hsl(200, 20%, 36%);
+	text-anchor: middle;
+}
+.cProgress .text {
+	font-size: 12px;
+}
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+		cursor: default;
+}

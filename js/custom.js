@@ -350,10 +350,10 @@ var span = document.getElementsByClassName("close_modal")[0];
 
 if(modal){
   for (const element of openModalBtn) {
-    console.log(element);
+    // console.log(element);
         // When a user's name is clicked, open the modal 
       element.onclick = ()=> {
-    console.log(element);
+    // console.log(element);
 
       modal.style.display = "block";
     }
@@ -395,11 +395,9 @@ if(modal){
       };
       var purchaseChart = new ApexCharts(document.querySelector("#purchase_tracking_new"), options);
       var salesVolume = new ApexCharts(document.querySelector("#sales_volume"), options);
-      var monthlySalesChart = new ApexCharts(document.querySelector("#monthly_sales_new"), options);
       var salesAmount = new ApexCharts(document.querySelector("#sales_amount"), options);
       purchaseChart.render();
       salesVolume.render();
-      monthlySalesChart.render();
       salesAmount.render();
   
 }
@@ -608,4 +606,23 @@ volumeChart.render();
 
     var purchaseTrackingChart = new ApexCharts(document.querySelector("#purchase_tracking"), options);
     purchaseTrackingChart.render();
+}
+
+// monthly sales progress 
+let m_s_p = document.querySelector('.m_s_g');
+if(m_s_p){
+  
+  var forEach = function (array, callback, scope) {
+    for (var i = 0; i < array.length; i++) {
+      callback.call(scope, i, array[i]);
+    }
+  };
+  window.onload = function(){
+    var max = -219.99078369140625;
+    forEach(document.querySelectorAll('.cProgress'), function (index, value) {
+    percent = value.getAttribute('data-progress');
+      value.querySelector('.fill').setAttribute('style', 'stroke-dashoffset: ' + ((100 - percent) / 100) * max);
+      value.querySelector('.value').innerHTML = percent + '%';
+    });
+  }
 }
